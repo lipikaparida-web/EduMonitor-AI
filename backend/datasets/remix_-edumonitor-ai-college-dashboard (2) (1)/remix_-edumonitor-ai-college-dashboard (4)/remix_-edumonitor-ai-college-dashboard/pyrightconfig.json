@@ -1,0 +1,18 @@
+{
+  "include": ["backend"],
+  "exclude": ["backend/venv", "node_modules"],
+  "venvPath": "backend",
+  "venv": "venv",
+  "pythonVersion": "3.12",
+  "pythonPlatform": "Windows",
+  "typeCheckingMode": "basic",
+  "reportMissingModuleSource": "none",
+  "reportMissingImports": "warning",
+  "executionEnvironments": [
+    {
+      "root": "backend",
+      "pythonVersion": "3.12",
+      "extraPaths": ["backend"]
+    }
+  ]
+}

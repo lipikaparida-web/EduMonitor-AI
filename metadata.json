@@ -1,0 +1,8 @@
+{
+  "name": "Remix: EduMonitor AI College Dashboard",
+  "description": "A professional AI-enabled student performance monitoring and placement prediction platform with customized views for admins, faculty, and students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

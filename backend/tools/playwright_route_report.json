@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-07-11T06:49:48.093Z",
+  "results": [
+    {
+      "route": "/admin/dashboard",
+      "url": "http://127.0.0.1:3000/admin/dashboard",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "navigationError": null,
+      "finalUrl": "http://127.0.0.1:3000/admin/dashboard",
+      "bodyLength": 83656
+    },
+    {
+      "route": "/faculty/dashboard",
+      "url": "http://127.0.0.1:3000/faculty/dashboard",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "navigationError": null,
+      "finalUrl": "http://127.0.0.1:3000/faculty/dashboard",
+      "bodyLength": 83656
+    },
+    {
+      "route": "/student/dashboard",
+      "url": "http://127.0.0.1:3000/student/dashboard",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "navigationError": null,
+      "finalUrl": "http://127.0.0.1:3000/student/dashboard",
+      "bodyLength": 83656
+    },
+    {
+      "route": "/placement/dashboard",
+      "url": "http://127.0.0.1:3000/placement/dashboard",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "navigationError": null,
+      "finalUrl": "http://127.0.0.1:3000/placement/dashboard",
+      "bodyLength": 83656
+    }
+  ]
+}
