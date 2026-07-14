@@ -340,6 +340,7 @@ export default function LandingPage() {
       <LoginPortal
         initialRole={selectedRole}
         onBack={() => setView("login-select")}
+        onSwitch={() => setView("register-form")}
       />
     );
   }
@@ -348,6 +349,7 @@ export default function LandingPage() {
       <RegisterPortal
         initialRole={selectedRole}
         onBack={() => setView("register-select")}
+        onSwitch={() => setView("login-form")}
       />
     );
   }

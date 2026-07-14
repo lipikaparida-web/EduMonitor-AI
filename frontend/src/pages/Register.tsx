@@ -50,9 +50,11 @@ const ROLE_LABEL: Record<string, string> = {
 export default function Register({
   initialRole,
   onBack,
+  onSwitch,
 }: {
   initialRole?: UserRole;
   onBack?: () => void;
+  onSwitch?: () => void;
 } = {}) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -249,9 +251,13 @@ export default function Register({
           {/* Footer */}
           <div style={{ textAlign: "center", marginTop: 18, fontSize: 13, color: "var(--text-muted)" }}>
             Already have an account?{" "}
-            <a href="#" style={{ color: "var(--primary)", fontWeight: 600, textDecoration: "none" }}>
+            <button 
+              type="button" 
+              onClick={onSwitch}
+              style={{ color: "var(--primary)", fontWeight: 600, border: "none", background: "transparent", cursor: "pointer", padding: 0 }}
+            >
               Login
-            </a>
+            </button>
           </div>
 
           {onBack && (

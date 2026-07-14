@@ -53,9 +53,11 @@ const ROLE_LABEL: Record<string, string> = {
 export default function Login({
   initialRole,
   onBack,
+  onSwitch,
 }: {
   initialRole?: UserRole;
   onBack?: () => void;
+  onSwitch?: () => void;
 } = {}) {
   const { login, error, clearError } = useAuth();
   const [email, setEmail] = useState("");
@@ -96,9 +98,9 @@ export default function Login({
 
   /* Demo credentials per role */
   const demoMap: Record<string, { email: string; password: string }> = {
-    admin: { email: "admin@college.edu", password: "admin123" },
-    faculty: { email: "faculty@college.edu", password: "faculty123" },
-    student: { email: "student@college.edu", password: "student123" },
+    admin: { email: "admin@college.edu", password: "Admin@12345" },
+    faculty: { email: "faculty@college.edu", password: "Faculty@12345" },
+    student: { email: "student@college.edu", password: "Student@12345" },
   };
   const demo = demoMap[role];
 
@@ -295,9 +297,13 @@ export default function Login({
           {/* Footer */}
           <div style={{ textAlign: "center", marginTop: 18, fontSize: 13, color: "var(--text-muted)" }}>
             Don't have an account?{" "}
-            <a href="#" style={{ color: "var(--primary)", fontWeight: 600, textDecoration: "none" }}>
+            <button 
+              type="button" 
+              onClick={onSwitch}
+              style={{ color: "var(--primary)", fontWeight: 600, border: "none", background: "transparent", cursor: "pointer", padding: 0 }}
+            >
               Register
-            </a>
+            </button>
           </div>
 
           {onBack && (

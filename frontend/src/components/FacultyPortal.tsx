@@ -7,7 +7,7 @@ import {
   BookOpen, Users, Edit3, ShieldAlert, Sparkles, AlertTriangle,
   RefreshCw, Check, CheckCircle2, ChevronRight, GraduationCap, Send, Download,
   Search, FileText, Activity, Building2, Code, Flame, Clock, Compass, Printer, TrendingUp, X,
-  LayoutDashboard, UserCog, CalendarCheck, Award, Bell, Settings, Target, MessageSquare, Plus, Mail, Pencil, Save, Eye, Trash2, Library, Beaker, FlaskConical, Microscope, BrainCircuit, HeartPulse, Calendar as CalendarIcon, File as FileIcon, LifeBuoy
+  LayoutDashboard, UserCog, CalendarCheck, Award, Bell, Settings, Target, MessageSquare, Plus, Mail, Pencil, Save, Eye, Trash2, Library, Beaker, FlaskConical, Microscope, BrainCircuit, HeartPulse, Calendar as CalendarIcon, File as FileIcon, LifeBuoy, LogOut
 } from "lucide-react";
 import { Student, Alert, Faculty } from "../types";
 import { facultyList } from "../data/mockData";
@@ -822,6 +822,20 @@ export default function FacultyPortal({ students, setStudents, alerts, setAlerts
           ) : (
              <div className="text-[11px] text-[var(--text-muted)] font-medium">No classes assigned.</div>
           )}
+        </div>
+
+        {/* Sidebar Footer User Area */}
+        <div className="p-4 border-t border-[var(--border-light)] bg-[var(--surface-raised)] shrink-0">
+          <div className="flex items-center gap-3 p-2">
+            <img src={faculty.photoUrl || "https://api.dicebear.com/9.x/initials/svg?seed=Faculty"} alt="" className="w-10 h-10 rounded-full object-cover border-2 border-[var(--primary-light)]" referrerPolicy="no-referrer" />
+            <div className="flex-1 min-w-0 flex flex-col text-left">
+              <span className="text-sm font-bold text-[var(--text)] block truncate">{faculty.name}</span>
+              <span className="text-[10px] text-[var(--text-muted)] block truncate uppercase tracking-wider">Faculty</span>
+            </div>
+            <button onClick={onLogout} className="p-2 text-[var(--text-muted)] hover:text-[var(--danger)] hover:bg-red-50 rounded-lg transition-colors cursor-pointer" title="Logout">
+              <LogOut size={18} />
+            </button>
+          </div>
         </div>
       </aside>
 
